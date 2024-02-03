@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <script src="weather.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    
+    <title>Document</title>
+</head>
+<body class="bgmaincontaier">
+    <center>
+        <!--Search element-->
+         <div class="main">
+             <div class="input-group">
+              <input type="text" id="cityInput" class="form-control searchtext" placeholder="Enter your City">
+              <div class="input-group-append">
+                <button class="btn btn-success" type="button" onclick="weather()" >
+                  <i class="fa fa-search "></i>
+                </button>
+              </div>
+            </div>
+            
+            </div>
+        <!--buttons to covert celcius to fahrenheit--> 
+        
+        <div class="button-container d-flex flex-column">
+            <button class="button btn btn-danger" id="celciusid"  onclick="FahrenheitToCelcius()"> To Celcius</button>
+            <button class="button btn btn-primary" id="Fahrenheitid" onclick="convertToFahrenheit()"> To Fahrenheit</button>
+          </div>
+          <!--Current temperature details-->
+        
+         <p id="error" class="errormsg"></p>
+        <img src="" id="weathericon"class="currentTemperatureImage">   
+        <h1  class="maintemp" id="currentTemp">35°c</h1>    
+        <h2 id="cityName" class="nameCity">Visakhapatnam</h2>
+        <div class="currenttemperatureDetails" id="currentforecast">
+        
+        
+        <p  class="min" id="mintemp">Min Temp:</p>
+        <p  class="max" id="maxtemp">Max Temp:</p>
+        <p  class="Humiditycls" id="humidity">Humidity</p>
+        <p  class="wind" id="windspeed">Wind Speed</p>
+        <p  class="weatherdes" id="weatherDescription">Weather</h4>
+    </div>
+    <h1 id="Para1" class="head1">5 DAYS WEATHER FORECAST</h1>
+        
+
+    </center>
+    <!--Forecast weather details-->
+    
+    
+        <div id="iconsContainer">    
+            <div class = "icons">
+                <p class="weather" id="day1"></p>
+                <div class="image"><img src="images/clear.png" class="imgClass" id="img1"></div>
+                <div class="d-flex flex-row">
+                
+                <p class="minValues" id="day1Min">Min: 22.09°C</p>
+                <p class="maxValues" id="day1Max">Max: 21.28°C</p>
+                </div>
+                
+                
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day2"></p>
+                <div  class="image d-flex flex-row jusitify-content-center"><img src="images/clouds.png" class="imgClass" id="img2"></div>
+                <div class="d-flex flex-row">
+                <p class="minValues" id="day2Min">Min: 23.37°C</p>
+                <p class="maxValues" id="day2Max">Max: 25.58°C</p></div>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day3"></p>
+                <div class="image"><img src="images/drizzle.png" class="imgClass" id="img3"></div>
+                <div class="d-flex flex-row">
+                <p class="minValues" id="day3Min">Min: 23.36°C</p>
+                <p class="maxValues" id="day3Max">Max: 26.28°C</p>
+                </div>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day4"></p>
+                <div class="image"><img src="images/snow.png" class="imgClass" id="img4"></div>
+                <div class="d-flex flex-row">
+                <p class="minValues" id="day4Min">Min: 20.38°C</p>
+                <p class="maxValues" id="day4Max">Max: 27.18°C</p>
+                </div>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day5"></p>
+                <div class="image"><img src="images/mist.png" class="imgClass" id="img5"></div>
+                <div class="d-flex flex-row">
+                <p class="minValues" id="day5Min">Min: 24.38°C</p>
+                <p class="maxValues" id="day5Max">Max: 28.28°C</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
