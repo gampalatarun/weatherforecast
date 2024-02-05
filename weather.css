@@ -1,31 +1,20 @@
 @media screen and (max-width: 767px) {
-  .main {
-  width: 100%;
-  margin: 10px auto;
-}
-
-.button-container {
-  width: 100%;
-  margin: 10px auto;
-}
-
-.currenttemperatureDetails {
-  width: 100%;
-  margin: 10px auto;
-}
-
+ 
 #iconsContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.icons {
-  width: 48%;
-  margin-bottom: 10px;
-}
-
+            
+            padding-top: 15%;
+            margin: 120%;
+            height: auto;
+            
+          }         
+        
+    .bgmaincontaier {
+        background-image: url("weather.jpg");
+        background-repeat: repeat;
+        height: 325vh;
+        width: 300vw;
+        background-size: cover; /* Add this line */
+      }
 
 }
 
