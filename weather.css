@@ -107,11 +107,9 @@
 .bgmaincontaier{
     
     background-image:url("weather.jpg");
-    background-size:100% 100%;
+    background-size:cover;
     background-repeat:no-repeat;
     
-    width:1200px
-    margin:0 auto
 
     
    
