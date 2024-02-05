@@ -142,6 +142,9 @@
     background-image:url("weather.jpg");
     
     background-repeat:no-repeat;
+    color: rgb(7, 1, 1);
+    
+    background-size: cover;
     
     
 
