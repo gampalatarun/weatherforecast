@@ -1,3 +1,36 @@
+@media screen and (max-width: 767px) {
+  .main {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.button-container {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.currenttemperatureDetails {
+  width: 100%;
+  margin: 10px auto;
+}
+
+#iconsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icons {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+
+}
+
+
+
 
 
 .main {
