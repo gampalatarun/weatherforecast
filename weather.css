@@ -64,7 +64,7 @@
     font-style: oblique;
 
 }
-/* current temperatire details styling*/
+/* current temperature details styling*/
 .min,.max,.Humiditycls,.wind,.weatherdes{
     font-size: 13px;
     color: aliceblue;
@@ -105,9 +105,10 @@
   }
 
 .bgmaincontaier{
-    color: rgb(7, 1, 1);
-    background-image: url("weather.jpg");
-    background-size: cover;
+    
+    background-image:url("weather.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
     max-width:100%
     width:500px
     
