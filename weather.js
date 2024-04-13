@@ -11,6 +11,8 @@ var celciusBtn=document.getElementById("celciusid");
 var FahrenheitBtn=document.getElementById("Fahrenheitid")
 
 
+const urlapi="https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?select=name%2Ccou_name_en%2Ctimezone&where=population%3E1000&limit=100";
+
 
 
 
@@ -232,4 +234,70 @@ function convertToFahrenheit() {
 
 
   }
+
+
+
+
+
+
+
+  /* data retreving from the api*/ 
+function citiesdata(data){
+    
+    const tableBody = document.getElementById('cityTableBody');
+       
+       console.log(data.length)
+       for (i=0; i<data.length;i++){
+        console.log(data[i].name);
+        console.log(data[i].timezone);
+        console.log(data[i].cou_name_en);
+        const row = document.createElement('tr');
+        const nameCell = document.createElement('td');
+        
+        nameCell.textContent = data[i].name;
+        let atag=document.createElement("a");
+        atag.setAttribute("href", "www.google.com", "target","_blank")
+        atag.classList.add("atagcls")
+        atag.appendChild(nameCell)
+        const countryCell = document.createElement('td');
+        countryCell.textContent = data[i].cou_name_en;
+        const timezoneCell = document.createElement('td');
+        timezoneCell.textContent = data[i].timezone;
+        row.appendChild(atag);
+        row.appendChild(countryCell);
+        row.appendChild(timezoneCell);
+        tableBody.appendChild(row);
+    };
+
+       }
+
+/* filtering the data  by city */
+
+
+
+
+
+
+/* here data is fetched sucessfully*/
+
+let options1={
+    method:"GET",
+}
+
+
+fetch(urlapi,options1)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    /*console.log(data.results)*/
+    citiesdata(data.results);
+    filterdata(data.results)
+    
+    
+})
+.catch(error =>{
+    console.log("Error Fetching data:",error)
+})
+
 
